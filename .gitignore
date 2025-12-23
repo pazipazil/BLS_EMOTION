@@ -1,0 +1,50 @@
+# ===================== 1. 忽略IDE配置文件（无用，不上传） =====================
+# PyCharm/IDEA的配置目录
+.idea/
+# IDE生成的项目文件
+*.iml
+# VSCode配置（若用VSCode可加）
+.vscode/
+*.code-workspace
+
+# ===================== 2. 忽略Python缓存文件（无用） =====================
+# Python编译后的字节码文件
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+# 虚拟环境目录（若用venv/anaconda可加）
+venv/
+env/
+*.conda
+
+# ===================== 3. 忽略超大模型文件（核心！避免GitHub报错） =====================
+# MobileNetV3/BLS的模型权重
+models/*.pth
+models/*.pkl
+# 人脸检测模型（SSD/Res10）
+models/*.caffemodel
+models/*.prototxt
+# MediaPipe的人脸关键点模型
+models/*.task
+
+# ===================== 4. 忽略数据集文件（超大，不上传） =====================
+data/*.npz
+data/*.csv
+data/*.zip
+data/*.rar
+
+# ===================== 5. 忽略系统/临时文件（无用） =====================
+# Windows系统垃圾文件
+Thumbs.db
+Desktop.ini
+# Mac系统垃圾文件
+.DS_Store
+# 日志/临时文件
+*.log
+*.tmp
+*.bak
+# 编译/构建文件
+build/
+dist/
+*.egg-info/

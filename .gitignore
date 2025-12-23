@@ -8,11 +8,16 @@ __pycache__/
 *.pyc
 
 # models大文件（忽略，仅保留目录结构）
-models/*.pkl
-models/*.pth
-models/*.caffemodel
-models/*.task
-models/*.prototxt
+# 仅忽略2个超大.pkl（531MB/734MB）
+models/bls_blendshape.pkl
+models/bls_mnetv3.pkl
+
+# 放行models下其他所有文件（＜100MB）
+!models/*.pkl
+!models/*.pth
+!models/*.caffemodel
+!models/*.task
+!models/*.prototxt
 
 # data目录：仅忽略超大压缩包，保留.csv/.npz（＜100MB）
 data/*.zip
